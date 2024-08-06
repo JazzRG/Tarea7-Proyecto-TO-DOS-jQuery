@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Categoria</title>
+  </head>
+  <body>
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary btn-lg py-4"
+      data-bs-toggle="modal"
+      data-bs-target="#modalCrearCategoria"
+    >
+      Crear Categoria
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modalCrearCategoria"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="TituloCategoria"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="TituloCategoria">Crear Categoria</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="mb-3">
+                <label for="" class="form-label">Nombre de la Categoria</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name=""
+                  id="inputCategoria"
+                  placeholder=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button
+              id="botonGuardarCategoria"
+              type="button"
+              class="btn btn-primary"
+            >
+              Guardar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="listaCategoria"></div>
+
+    <template id="categoriaCard">
+      <div class="card text-bg-info mb-3" style="width: 10rem">
+        <div class="card-body">
+          <h5 class="card-title">Ejemplo</h5>
+          <a href="#" class="btn btn-warning">Ir Tareas</a>
+        </div>
+      </div>
+    </template>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
+<!-- Proyecto de Todos - jQuery Valor: 5%
+En clases anteriores se desarrolló una parte de un proyecto de todos en conjunto. Como
+desarrollador frontend, su tarea consiste en cubrir los siguientes puntos de la app.
+1. Crear el método de crear un todo y guardarlo en el localStorage. (2%)
+2. Agregar alerta que le indique al usuario que se agregó el todo y las alertas de
+errores que considere necesarias. (1%)
+3. Inyectar los todos nuevos y filtrados(si existen) en el html, mostrar todos si no existe
+la categoría en los query params. (2%)
+Puntos extras (+1%)
+1. Eliminar un todo y refrescar la UI
+2. Actualizar un todo y agregar el atributo necesario para cambiar el estilo del check
+(usar el evento change en los inputs check y realizar las investigaciones necesarias
+para completar este punto) -->
